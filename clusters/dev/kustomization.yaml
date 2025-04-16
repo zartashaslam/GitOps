@@ -5,3 +5,4 @@ resources:
 - infrastructure/influxdb.yaml
 - infrastructure/sources.yaml
 - infrastructure/crossplane-core.yaml
+- infrastructure/crossplane-providers.yaml
