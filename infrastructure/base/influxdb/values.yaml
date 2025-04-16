@@ -9,7 +9,7 @@
 ##
 persistence:
   enabled: true
-  storageClass: default
+  storageClass: standard
   size: 2Gi
 
 
