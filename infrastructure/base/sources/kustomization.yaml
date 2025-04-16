@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - influxdata.yaml
+  - crossplane.yaml
