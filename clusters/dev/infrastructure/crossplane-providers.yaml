@@ -8,5 +8,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/dev/crossplane-provider
+  path: ./infrastructure/dev/crossplane-providers
   prune: true
