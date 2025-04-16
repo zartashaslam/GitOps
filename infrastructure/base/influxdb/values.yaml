@@ -1,0 +1,27 @@
+## https://github.com/influxdata/helm-charts/blob/master/charts/influxdb/values.yaml
+##
+## WARNING: Before upgrading to influxdb v2 - Please ensure K6 supports v2. See below github issue.
+## https://github.com/k6io/k6/issues/1730
+##
+## Test URLs once successfully deployed with admin user setup
+## https://influx.aurora.calrom.com/query?q=SHOW%20DATABASES
+## https://influx.aurora.calrom.com/query?q=SHOW%20DIAGNOSTICS
+##
+persistence:
+  enabled: true
+  storageClass: default
+  size: 2Gi
+
+
+
+    
+## Create default user through Kubernetes job
+## Defaults indicated below
+##
+setDefaultUser:
+  enabled: false
+  user:
+    existingSecret: influxdb-secret
+config:
+  http:
+    auth-enabled: true

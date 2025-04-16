@@ -1,0 +1,22 @@
+## WARNING: Before upgrading to influxdb v2 - Please ensure K6 supports v2. See below github issue.
+## https://github.com/k6io/k6/issues/1730
+## https://github.com/influxdata/helm-charts/blob/master/charts/influxdb/Chart.yaml
+
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: influxdb
+spec:
+  releaseName: influxdb
+  chart:
+    spec:
+      chart: influxdb
+      sourceRef:
+        kind: HelmRepository
+        name: influxdata
+        namespace: flux-system
+      version: "4.12.5"
+  interval: 10m0s
+  valuesFrom:
+    - kind: ConfigMap
+      name: influxdb-values
