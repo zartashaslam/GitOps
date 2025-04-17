@@ -6,3 +6,4 @@ resources:
 - infrastructure/sources.yaml
 - infrastructure/crossplane-core.yaml
 - infrastructure/crossplane-providers.yaml
+- infrastructure/crossplane-provider-config.yaml
