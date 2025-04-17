@@ -7,3 +7,5 @@ resources:
 - infrastructure/crossplane-core.yaml
 - infrastructure/crossplane-providers.yaml
 - infrastructure/crossplane-provider-config.yaml
+- infrastructure/rds.yaml
+

@@ -1,0 +1,17 @@
+apiVersion: database.aws.crossplane.io/v1beta1
+kind: RDSInstance
+metadata:
+  name: example-rds-instance
+spec:
+  forProvider:
+    dbInstanceClass: db.t3.micro
+    masterUsername: masteruser
+    masterUserPasswordSecretRef:
+      name: rds-instance-creds
+      key: password
+    allocatedStorage: 20
+    engine: mysql
+    engineVersion: "5.7"
+    region: us-west-2
+  providerConfigRef:
+    name: default
