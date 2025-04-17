@@ -6,8 +6,9 @@ spec:
   forProvider:
     dbInstanceClass: db.t3.micro
     masterUsername: masteruser
-    masterUserPasswordSecretRef:
+    masterPasswordSecretRef:
       name: rds-instance-creds
+      namespace: crossplane-system
       key: password
     allocatedStorage: 20
     engine: mysql
